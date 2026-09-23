@@ -1,0 +1,371 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg: #1a1a1a;
+    --bg-mid: #242424;
+    --surface: #2f2f2f;
+    --text: #ffffff;
+    --muted: rgba(255, 255, 255, 0.72);
+    --accent: #e74c3c;
+    --teal: #1abc9c;
+    --teal-hover: #16a085;
+    --line: #e74c3c;
+    --font: "Montserrat", sans-serif;
+    --nav-h: 64px;
+}
+
+html,
+body {
+    min-height: 100%;
+}
+
+body {
+    font-family: var(--font);
+    background: linear-gradient(180deg, var(--bg) 0%, #2c2c2c 100%);
+    color: var(--text);
+    line-height: 1.6;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+a {
+    color: var(--teal);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    min-height: var(--nav-h);
+    padding: 12px 22px;
+    background: rgba(18, 18, 18, 0.92);
+    border-bottom: 2px solid var(--line);
+    backdrop-filter: blur(10px);
+}
+
+.brand {
+    color: var(--text);
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-size: 1rem;
+}
+
+.brand:hover {
+    color: var(--text);
+    text-decoration: none;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 8px 18px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+.nav-links a {
+    color: var(--muted);
+    font-size: 0.92rem;
+    font-weight: 700;
+}
+
+.nav-links a:hover,
+.nav-links a.is-active {
+    color: var(--text);
+    text-decoration: none;
+}
+
+.lang-toggle {
+    background: var(--teal);
+    border: none;
+    padding: 7px 12px;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 6px;
+    font-weight: 700;
+    font-family: inherit;
+    font-size: 0.8rem;
+}
+
+.lang-toggle:hover {
+    background: var(--teal-hover);
+}
+
+.page {
+    width: min(1040px, calc(100% - 32px));
+    margin: 0 auto;
+    padding: 36px 0 56px;
+    flex: 1;
+}
+
+.page-lead {
+    text-align: center;
+    margin-bottom: 28px;
+}
+
+.page-lead h1 {
+    font-size: clamp(1.7rem, 4vw, 2.4rem);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.page-lead p {
+    margin-top: 8px;
+    color: var(--muted);
+    font-size: 1.05rem;
+}
+
+.policy-page {
+    max-width: 760px;
+}
+
+.policy-page h1 {
+    font-size: clamp(1.7rem, 4vw, 2.3rem);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 18px;
+}
+
+.policy-page h2 {
+    font-size: 1.15rem;
+    color: var(--accent);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 32px 0 12px;
+}
+
+.policy-page p,
+.policy-page li {
+    color: var(--muted);
+    margin-bottom: 12px;
+}
+
+.policy-page ul {
+    margin: 0 0 16px 1.2rem;
+}
+
+.policy-page li {
+    margin-bottom: 8px;
+}
+
+.section-title {
+    font-size: 1.15rem;
+    color: var(--accent);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 14px;
+}
+
+.site-footer {
+    text-align: center;
+    padding: 22px 16px;
+    background: #141414;
+    border-top: 2px solid var(--line);
+    color: var(--muted);
+    font-size: 0.92rem;
+}
+
+.site-footer nav {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    margin-bottom: 8px;
+}
+
+.pill {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 999px;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.6px;
+    text-transform: uppercase;
+}
+
+.pill-live {
+    background: var(--teal);
+    color: #07332b;
+}
+
+.pill-soon {
+    background: #4a4a4a;
+    color: #eee;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-width: 500px;
+    margin-top: 18px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 12px;
+    border: 2px solid var(--accent);
+    border-radius: 6px;
+    background: #222;
+    color: #fff;
+    font-family: inherit;
+    font-size: 1rem;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: var(--teal);
+    outline: none;
+}
+
+.contact-form button {
+    background: var(--teal);
+    border: none;
+    padding: 12px;
+    color: #fff;
+    font-weight: 700;
+    border-radius: 6px;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+.contact-form button:hover {
+    background: var(--teal-hover);
+}
+
+.contact-form button:disabled {
+    background: #666;
+    cursor: not-allowed;
+}
+
+.form-message {
+    font-size: 0.9rem;
+}
+
+.form-message.success {
+    color: var(--teal);
+}
+
+.form-message.error {
+    color: var(--accent);
+}
+
+.modal,
+.thank-you-modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal.open,
+.thank-you-modal.open {
+    display: flex;
+}
+
+.modal img {
+    max-width: 90vw;
+    max-height: 90vh;
+    border: 2px solid var(--accent);
+    border-radius: 10px;
+    object-fit: contain;
+}
+
+.thank-you-modal .content {
+    background: var(--surface);
+    border: 2px solid var(--accent);
+    border-radius: 12px;
+    padding: 28px;
+    text-align: center;
+    max-width: 560px;
+    width: 90%;
+}
+
+.thank-you-modal h2 {
+    color: var(--accent);
+    text-transform: uppercase;
+    margin-bottom: 12px;
+}
+
+.modal-close,
+.thank-you-modal-close {
+    position: absolute;
+    top: 16px;
+    right: 20px;
+    color: #fff;
+    font-size: 2rem;
+    cursor: pointer;
+    line-height: 1;
+}
+
+.return-btn,
+.store-btn {
+    display: inline-block;
+}
+
+.return-btn {
+    background: var(--teal);
+    padding: 10px 20px;
+    border-radius: 6px;
+    color: #fff;
+    font-weight: 700;
+    margin-top: 16px;
+}
+
+.return-btn:hover {
+    background: var(--teal-hover);
+    text-decoration: none;
+    color: #fff;
+}
+
+.store-buttons {
+    display: flex;
+    gap: 14px;
+    margin-top: 16px;
+}
+
+.store-btn img {
+    width: 28px;
+    height: 28px;
+    filter: brightness(0) invert(1) sepia(1) hue-rotate(160deg) saturate(50%) brightness(90%);
+}
+
+.store-btn:hover {
+    text-decoration: none;
+}
+
+.store-btn:hover img {
+    filter: brightness(0) invert(1) sepia(1) hue-rotate(160deg) saturate(70%) brightness(100%);
+}
+
+@media (max-width: 640px) {
+    .site-header {
+        flex-wrap: wrap;
+        padding: 10px 14px;
+    }
+
+    .nav-links {
+        width: 100%;
+        justify-content: space-between;
+    }
+}

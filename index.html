@@ -3,631 +3,82 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BoxterGames - Support & Projects</title>
+    <title>BoxterGames - Games</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <link rel="icon" href="Images/favicon.ico" type="image/x-icon">
-    <meta name="description" content="BoxterGames - Support and projects for Solitaire Harmony and more fun games.">
-    <meta name="keywords" content="BoxterGames, Solitaire Harmony, mobile games, support">
+    <meta name="description" content="BoxterGames — mobile games from Solitaire Harmony and more.">
     <meta name="author" content="BoxterGames">
-    <meta property="og:title" content="BoxterGames - Support & Projects">
-    <meta property="og:description" content="Discover Solitaire Harmony and get support for our games.">
+    <meta property="og:title" content="BoxterGames - Games">
+    <meta property="og:description" content="Pick a project and open its page.">
     <meta property="og:image" content="Images/Solitaire/Klondike.png">
-    <meta property="og:url" content="https://yourusername.github.io">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        body {
-            font-family: 'Montserrat', sans-serif;
-            background: linear-gradient(180deg, #1A1A1A 0%, #2C2C2C 100%);
-            color: #fff;
-            line-height: 1.6;
-        }
-        .container {
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-        header {
-            text-align: center;
-            padding: 50px 0;
-            border-bottom: 2px solid #E74C3C;
-        }
-        header h1 {
-            font-size: 2.5rem;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-        }
-        header p {
-            font-size: 1.1rem;
-            opacity: 0.8;
-        }
-        .lang-toggle {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-        }
-        .lang-toggle button {
-            background: #1ABC9C;
-            border: none;
-            padding: 8px 16px;
-            color: #fff;
-            cursor: pointer;
-            border-radius: 6px;
-            font-weight: bold;
-            transition: transform 0.2s, background 0.2s;
-        }
-        .lang-toggle button:hover {
-            background: #16A085;
-            transform: translateY(-2px);
-        }
-        .section {
-            margin: 50px 0;
-            opacity: 0;
-            transform: translateY(20px);
-            animation: fadeIn 1s forwards;
-        }
-        .section h2 {
-            font-size: 1.8rem;
-            margin-bottom: 25px;
-            color: #E74C3C;
-            text-transform: uppercase;
-        }
-        .project-card {
-            background: #333;
-            border: 2px solid #E74C3C;
-            border-radius: 12px;
-            padding: 25px;
-            margin-bottom: 25px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-            transition: transform 0.3s;
-        }
-        .project-card:hover {
-            transform: translateY(-5px);
-        }
-        .project-card h3 {
-            color: #1ABC9C;
-            margin-bottom: 10px;
-        }
-        .project-card p {
-            opacity: 0.9;
-        }
-        .game-list {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            margin: 20px 0;
-        }
-        .game-list span {
-            background: #1ABC9C;
-            padding: 8px 16px;
-            border-radius: 6px;
-            font-weight: bold;
-        }
-        .screenshots-wrapper {
-            position: relative;
-            overflow: hidden;
-        }
-        .screenshots {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            overflow-x: auto;
-            padding: 15px 0;
-            scroll-behavior: smooth;
-            scroll-snap-type: x mandatory;
-            -webkit-overflow-scrolling: touch;
-        }
-        .screenshots img {
-            width: 200px;
-            border: 2px solid #E74C3C;
-            border-radius: 10px;
-            transition: transform 0.3s;
-            cursor: pointer;
-            scroll-snap-align: start;
-            object-fit: contain;
-            opacity: 0;
-            animation: fadeIn 0.5s forwards;
-        }
-        .screenshots img:hover {
-            transform: scale(1.05);
-        }
-        .screenshots-wrapper::before,
-        .screenshots-wrapper::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            width: 50px;
-            height: 100%;
-            z-index: 1;
-            pointer-events: none;
-            opacity: 0;
-            transition: opacity 0.3s;
-        }
-        .screenshots-wrapper::before {
-            left: 0;
-            background: linear-gradient(to right, #1A1A1A, transparent);
-        }
-        .screenshots-wrapper::after {
-            right: 0;
-            background: linear-gradient(to left, #1A1A1A, transparent);
-        }
-        .screenshots-wrapper.scrollable::before,
-        .screenshots-wrapper.scrollable::after {
-            opacity: 1;
-        }
-        .modal, .thank-you-modal {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.8);
-            z-index: 1000;
-            justify-content: center;
-            align-items: center;
-            opacity: 0;
-            transition: opacity 0.3s ease;
-        }
-        .modal.open, .thank-you-modal.open {
-            display: flex;
-            opacity: 1;
-        }
-        .modal img {
-            max-width: 90vw;
-            max-height: 90vh;
-            border: 2px solid #E74C3C;
-            border-radius: 10px;
-            object-fit: contain;
-            animation: zoomIn 0.3s ease;
-        }
-        .thank-you-modal .content {
-            background: #333;
-            border: 2px solid #E74C3C;
-            border-radius: 12px;
-            padding: 30px;
-            text-align: center;
-            max-width: 600px;
-            width: 90%;
-            animation: zoomIn 0.3s ease;
-        }
-        .thank-you-modal h2 {
-            font-size: 1.8rem;
-            color: #E74C3C;
-            text-transform: uppercase;
-            margin-bottom: 20px;
-        }
-        .thank-you-modal p {
-            font-size: 1.1rem;
-            opacity: 0.9;
-            margin-bottom: 20px;
-        }
-        .thank-you-modal .return-btn {
-            display: inline-block;
-            background: #1ABC9C;
-            padding: 10px 20px;
-            border-radius: 4px;
-            color: #fff;
-            font-weight: bold;
-            text-decoration: none;
-            transition: background 0.2s;
-        }
-        .thank-you-modal .return-btn:hover {
-            background: #16A085;
-        }
-        .modal-close, .thank-you-modal-close {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            color: #fff;
-            font-size: 2rem;
-            cursor: pointer;
-            transition: color 0.2s;
-            aria-label: "Закрыть";
-        }
-        .modal-close:hover, .thank-you-modal-close:hover {
-            color: #E74C3C;
-        }
-        .coming-soon {
-            opacity: 0.7;
-            font-style: italic;
-        }
-        .store-buttons {
-            display: flex;
-            justify-content: flex-start;
-            gap: 15px;
-            margin-top: 15px;
-            margin-left: 10px;
-        }
-        .store-btn {
-            display: inline-block;
-            border-radius: 4px;
-            transition: transform 0.2s, box-shadow 0.2s;
-        }
-        .store-btn img {
-            width: 28px;
-            height: 28px;
-            filter: brightness(0) invert(1) sepia(1) hue-rotate(160deg) saturate(50%) brightness(90%);
-        }
-        .store-btn:hover {
-            transform: scale(1.1);
-            box-shadow: 0 0 8px rgba(26, 188, 156, 0.3);
-        }
-        .store-btn:hover img {
-            filter: brightness(0) invert(1) sepia(1) hue-rotate(160deg) saturate(70%) brightness(100%);
-        }
-        .contact-form {
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-            max-width: 500px;
-            margin-top: 25px;
-        }
-        .contact-form input,
-        .contact-form textarea {
-            padding: 12px;
-            border: 2px solid #E74C3C;
-            border-radius: 6px;
-            background: #222;
-            color: #fff;
-            transition: border-color 0.2s;
-        }
-        .contact-form input:focus,
-        .contact-form textarea:focus {
-            border-color: #1ABC9C;
-            outline: none;
-        }
-        .contact-form button {
-            background: #1ABC9C;
-            border: none;
-            padding: 12px;
-            color: #fff;
-            font-weight: bold;
-            border-radius: 6px;
-            cursor: pointer;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-            transition: transform 0.2s, background 0.2s;
-        }
-        .contact-form button:hover {
-            background: #16A085;
-            transform: translateY(-2px);
-        }
-        .contact-form button:disabled {
-            background: #666;
-            cursor: not-allowed;
-        }
-        .form-message {
-            margin-top: 12px;
-            font-size: 0.9rem;
-        }
-        .form-message.success {
-            color: #1ABC9C;
-        }
-        .form-message.error {
-            color: #E74C3C;
-        }
-        footer {
-            text-align: center;
-            padding: 25px;
-            background: #1A1A1A;
-            border-top: 2px solid #E74C3C;
-            margin-top: 50px;
-        }
-        a {
-            color: #1ABC9C;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-        @keyframes fadeIn {
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        @keyframes zoomIn {
-            from {
-                transform: scale(0.8);
-                opacity: 0;
-            }
-            to {
-                transform: scale(1);
-                opacity: 1;
-            }
-        }
-        @media (max-width: 600px) {
-            header h1 {
-                font-size: 1.8rem;
-            }
-            .section h2 {
-                font-size: 1.5rem;
-            }
-            .screenshots img {
-                width: 150px;
-            }
-            .store-btn img {
-                width: 25px;
-                height: 25px;
-            }
-            .thank-you-modal .content {
-                padding: 20px;
-            }
-            .thank-you-modal h2 {
-                font-size: 1.5rem;
-            }
-            .thank-you-modal p {
-                font-size: 1rem;
-            }
-        }
-    </style>
+    <meta property="og:url" content="https://boxtergames.github.io">
+    <link rel="stylesheet" href="css/studio.css">
+    <link rel="stylesheet" href="css/home.css">
 </head>
 <body>
-    <div class="lang-toggle">
-        <button onclick="toggleLanguage()">RU/EN</button>
-    </div>
-    <div class="container">
-        <header>
-            <h1 id="header-title">BoxterGames</h1>
-            <p id="header-subtitle">Crafting Fun & Challenging Games</p>
-        </header>
+    <header class="site-header">
+        <a class="brand" href="index.html">BoxterGames</a>
+        <nav class="nav-links">
+            <a href="index.html" class="is-active" data-i18n="nav-games">Games</a>
+            <a href="support.html" data-i18n="nav-support">Support</a>
+            <a href="privacy.html" data-i18n="nav-privacy">Privacy</a>
+            <button type="button" class="lang-toggle" onclick="toggleLanguage()">RU/EN</button>
+        </nav>
+    </header>
 
-        <div class="section" id="projects">
-            <h2 id="projects-title">Our Projects</h2>
-            <div class="project-card">
-                <h3 id="solitaire-title">Solitaire Harmony</h3>
-                <p id="solitaire-desc">5 classic solitaire games in one app, perfect for relaxing and brain training.</p>
-                <div class="game-list" id="game-list">
-                    <span>Klondike</span>
-                    <span>Spider</span>
-                    <span>FreeCell</span>
-                    <span>Pyramid</span>
-                    <span>TriPeaks</span>
-                </div>
-                <div class="screenshots-wrapper">
-                    <div class="screenshots">
-                        <img src="Images/Solitaire/Klondike.png" alt="Klondike Screenshot" loading="lazy" onclick="openModal(this.src)">
-                        <img src="Images/Solitaire/FreeCell.png" alt="FreeCell Screenshot" loading="lazy" onclick="openModal(this.src)">
-                        <img src="Images/Solitaire/TriPeak.png" alt="TriPeak Screenshot" loading="lazy" onclick="openModal(this.src)">
-                        <img src="Images/Solitaire/Tutorial.png" alt="Tutorial Screenshot" loading="lazy" onclick="openModal(this.src)">
+    <main class="page home-page">
+        <div class="page-lead">
+            <p class="lead-kicker" data-i18n="nav-games">Games</p>
+            <h1 data-i18n="home-title">Made at Boxter</h1>
+        </div>
+
+        <section class="carousel" aria-roledescription="carousel" aria-label="Projects">
+            <button type="button" class="carousel-arrow prev" data-i18n-aria="carousel-prev" aria-label="Previous project">‹</button>
+            <div class="carousel-viewport">
+                <a class="carousel-slide slide-solitaire" href="games/solitaire.html" draggable="false">
+                    <div class="slide-media">
+                        <img src="Images/Solitaire/Klondike.png" alt="" loading="eager" draggable="false">
                     </div>
-                </div>
-                <div class="store-buttons">
-                    <a href="https://apps.apple.com/your-app-link" class="store-btn" title="Download on the App Store" aria-label="Download on the App Store" rel="noopener noreferrer">
-                        <img src="Images/Icons/app-store.png" alt="App Store" loading="lazy">
-                    </a>
-                    <a href="https://play.google.com/store/apps/details?id=com.boxtergames.solitaireHarmony" class="store-btn" title="Download on Google Play" aria-label="Download on Google Play" rel="noopener noreferrer">
-                        <img src="Images/Icons/play-store.png" alt="Google Play" loading="lazy">
-                    </a>
-                </div>
+                    <div class="slide-meta">
+                        <span class="pill pill-live" data-i18n="status-live">Live</span>
+                        <h2 data-i18n="solitaire-title">Solitaire Harmony</h2>
+                        <p data-i18n="solitaire-tag">5 classic solitaire modes in one app</p>
+                        <span class="slide-cta" data-i18n="slide-open">Open project</span>
+                    </div>
+                </a>
+                <a class="carousel-slide slide-tictactoe" href="games/tic-tac-toe.html" draggable="false">
+                    <div class="slide-media">
+                        <div class="ttt-art" aria-hidden="true">
+                            <span>X</span><span>O</span><span></span>
+                            <span></span><span>X</span><span>O</span>
+                            <span>O</span><span></span><span>X</span>
+                        </div>
+                    </div>
+                    <div class="slide-meta">
+                        <span class="pill pill-soon" data-i18n="status-soon">Soon</span>
+                        <h2 data-i18n="tictactoe-title">Tic-Tac-Toe</h2>
+                        <p data-i18n="tictactoe-tag">Networked matches — coming soon</p>
+                        <span class="slide-cta" data-i18n="slide-preview">View page</span>
+                    </div>
+                </a>
             </div>
-            <div class="project-card coming-soon">
-                <h3 id="coming-soon-title">Coming Soon: Tic-Tac-Toe</h3>
-                <p id="coming-soon-desc">A networked Tic-Tac-Toe game for endless fun — stay tuned!</p>
-            </div>
-        </div>
+            <button type="button" class="carousel-arrow next" data-i18n-aria="carousel-next" aria-label="Next project">›</button>
+            <div class="carousel-dots" role="tablist" aria-label="Projects"></div>
+        </section>
 
-        <div class="section" id="support">
-            <h2 id="support-title">Support</h2>
-            <p id="support-desc">Need help? Reach out to us!</p>
-            <p><strong>Email:</strong> <a href="mailto:support@boxtergames.com">support@boxtergames.com</a></p>
-            <form class="contact-form" id="contact-form" action="https://formspree.io/f/xvgagzvz" method="POST">
-                <input type="text" name="name" placeholder="Your Name" required>
-                <input type="email" name="email" placeholder="Your Email" required>
-                <textarea name="message" placeholder="Your Message" rows="4" required></textarea>
-                <button type="submit" id="submit-btn">Send</button>
-                <div class="form-message" id="form-message"></div>
-            </form>
-        </div>
+        <section class="home-about">
+            <p data-i18n="home-desc">Compact mobile games, each with its own mood. Drag the lineup, tap a cover, and open that project's page — stores, modes, and screenshots live there.</p>
+        </section>
+    </main>
 
-        <div class="section" id="privacy">
-            <h2 id="privacy-title">Privacy Policy</h2>
-            <p id="privacy-desc">
-                We respect your privacy. Solitaire Harmony uses Unity Analytics to collect anonymized data (e.g., gameplay events, device info) to improve the game. This data is stored for 30 days and is not linked to your identity. Your game progress is saved locally on your device, and we do not collect any personal information.
-            </p>
-        </div>
-    </div>
-
-    <div class="modal" id="image-modal" role="dialog" aria-modal="true">
-        <span class="modal-close" onclick="closeModal()" aria-label="Close">×</span>
-        <img src="" alt="Enlarged Screenshot" id="modal-image">
-    </div>
-
-    <div class="thank-you-modal" id="thank-you-modal" role="dialog" aria-modal="true">
-        <span class="thank-you-modal-close" onclick="closeThankYouModal()" aria-label="Close">×</span>
-        <div class="content">
-            <h2 id="thank-you-title">Thank You!</h2>
-            <p id="thank-you-desc">We’ve received your message and will get back to you soon. Thanks for reaching out!</p>
-            <a href="#" class="return-btn" id="return-btn" onclick="closeThankYouModal()">Close</a>
-        </div>
-    </div>
-
-    <footer>
-        <p>© 2025 BoxterGames. All rights reserved.</p>
+    <footer class="site-footer">
+        <nav>
+            <a href="support.html" data-i18n="nav-support">Support</a>
+            <a href="privacy.html" data-i18n="nav-privacy">Privacy</a>
+        </nav>
+        <p data-i18n="footer-copy">© 2026 BoxterGames. All rights reserved.</p>
     </footer>
 
-    <script>
-        const translations = {
-            en: {
-                "header-title": "BoxterGames",
-                "header-subtitle": "Crafting Fun & Challenging Games",
-                "projects-title": "Our Projects",
-                "solitaire-title": "Solitaire Harmony",
-                "solitaire-desc": "5 classic solitaire games in one app, perfect for relaxing and brain training.",
-                "app-store-title": "Download on the App Store",
-                "google-play-title": "Download on Google Play",
-                "coming-soon-title": "Coming Soon: Tic-Tac-Toe",
-                "coming-soon-desc": "A networked Tic-Tac-Toe game for endless fun — stay tuned!",
-                "support-title": "Support",
-                "support-desc": "Need help? Reach out to us!",
-                "privacy-title": "Privacy Policy",
-                "privacy-desc": "We respect your privacy. Solitaire Harmony uses Unity Analytics to collect anonymized data (e.g., gameplay events, device info) to improve the game. This data is stored for 30 days and is not linked to your identity. Your game progress is saved locally on your device, and we do not collect any personal information.",
-                "form-sending": "Sending...",
-                "form-success": "Message sent successfully!",
-                "form-error": "Error sending message. Please try again.",
-                "form-validation-error": "Message must be at least 10 characters.",
-                "thank-you-title": "Thank You!",
-                "thank-you-desc": "We’ve received your message and will get back to you soon. Thanks for reaching out!",
-                "return-btn": "Close"
-            },
-            ru: {
-                "header-title": "BoxterGames",
-                "header-subtitle": "Создаём весёлые и сложные игры",
-                "projects-title": "Наши проекты",
-                "solitaire-title": "Solitaire Harmony",
-                "solitaire-desc": "5 классических пасьянсов в одном приложении, идеально для отдыха и тренировки мозга.",
-                "app-store-title": "Скачать в App Store",
-                "google-play-title": "Скачать в Google Play",
-                "coming-soon-title": "Скоро: Крестики-нолики",
-                "coming-soon-desc": "Сетевая игра в крестики-нолики для бесконечного веселья — следите за новостями!",
-                "support-title": "Поддержка",
-                "support-desc": "Нужна помощь? Свяжитесь с нами!",
-                "privacy-title": "Политика конфиденциальности",
-                "privacy-desc": "Мы уважаем вашу приватность. Solitaire Harmony использует Unity Analytics для сбора анонимных данных (например, игровые события, информация об устройстве) для улучшения игры. Эти данные хранятся 30 дней и не привязаны к вашей личности. Прогресс игры сохраняется локально на вашем устройстве, и мы не собираем личную информацию.",
-                "form-sending": "Отправка...",
-                "form-success": "Сообщение успешно отправлено!",
-                "form-error": "Ошибка при отправке. Попробуйте снова.",
-                "form-validation-error": "Сообщение должно содержать минимум 10 символов.",
-                "thank-you-title": "Спасибо!",
-                "thank-you-desc": "Мы получили ваше сообщение и скоро свяжемся с вами. Спасибо за обращение!",
-                "return-btn": "Закрыть"
-            }
-        };
-
-        let currentLang = localStorage.getItem('language') || 'en';
-
-        function toggleLanguage() {
-            currentLang = currentLang === 'en' ? 'ru' : 'en';
-            localStorage.setItem('language', currentLang);
-            updateTranslations();
-        }
-
-        function updateTranslations() {
-            for (let id in translations[currentLang]) {
-                const element = document.getElementById(id);
-                if (element) {
-                    element.textContent = translations[currentLang][id];
-                }
-            }
-            const appStoreBtn = document.querySelector('.store-btn[href*="apps.apple.com"]');
-            const googlePlayBtn = document.querySelector('.store-btn[href*="play.google.com"]');
-            if (appStoreBtn) appStoreBtn.setAttribute('title', translations[currentLang]['app-store-title']);
-            if (googlePlayBtn) googlePlayBtn.setAttribute('title', translations[currentLang]['google-play-title']);
-        }
-
-        function openModal(src) {
-            const modal = document.getElementById('image-modal');
-            const modalImg = document.getElementById('modal-image');
-            modalImg.src = src;
-            modal.classList.add('open');
-            document.body.style.overflow = 'hidden'; // Блокировка прокрутки
-        }
-
-        function closeModal() {
-            const modal = document.getElementById('image-modal');
-            modal.classList.remove('open');
-            document.body.style.overflow = ''; // Восстановление прокрутки
-        }
-
-        function openThankYouModal() {
-            const modal = document.getElementById('thank-you-modal');
-            modal.classList.add('open');
-            document.body.style.overflow = 'hidden'; // Блокировка прокрутки
-        }
-
-        function closeThankYouModal() {
-            const modal = document.getElementById('thank-you-modal');
-            modal.classList.remove('open');
-            document.body.style.overflow = ''; // Восстановление прокрутки
-        }
-
-        window.onload = () => {
-            updateTranslations();
-
-            const screenshotsWrapper = document.querySelector('.screenshots-wrapper');
-            const screenshots = screenshotsWrapper.querySelector('.screenshots');
-
-            function checkScrollable() {
-                if (screenshots.scrollWidth > screenshots.clientWidth) {
-                    screenshotsWrapper.classList.add('scrollable');
-                } else {
-                    screenshotsWrapper.classList.remove('scrollable');
-                }
-            }
-
-            window.addEventListener('resize', checkScrollable);
-            checkScrollable();
-
-            const imageModal = document.getElementById('image-modal');
-            imageModal.addEventListener('click', (event) => {
-                if (event.target === imageModal) {
-                    closeModal();
-                }
-            });
-
-            document.addEventListener('keydown', (event) => {
-                if (event.key === 'Escape') {
-                    closeModal();
-                    closeThankYouModal();
-                }
-            });
-
-            screenshots.addEventListener('scroll', () => {
-                const scrollLeft = screenshots.scrollLeft;
-                const maxScroll = screenshots.scrollWidth - screenshots.clientWidth;
-                screenshotsWrapper.classList.toggle('scrollable-left', scrollLeft > 0);
-                screenshotsWrapper.classList.toggle('scrollable-right', scrollLeft < maxScroll);
-            });
-        };
-
-        const form = document.getElementById('contact-form');
-        const formMessage = document.getElementById('form-message');
-        const submitBtn = document.getElementById('submit-btn');
-
-        form.addEventListener('submit', async (e) => {
-            e.preventDefault();
-
-            const message = form.querySelector('textarea[name="message"]').value;
-            if (message.length < 10) {
-                formMessage.textContent = translations[currentLang]['form-validation-error'];
-                formMessage.className = 'form-message error';
-                return;
-            }
-
-            submitBtn.disabled = true;
-            formMessage.textContent = translations[currentLang]['form-sending'];
-            formMessage.className = 'form-message';
-
-            const formData = new FormData(form);
-            const formAction = form.getAttribute('action');
-
-            try {
-                const response = await fetch(formAction, {
-                    method: 'POST',
-                    body: formData,
-                    headers: {
-                        'Accept': 'application/json'
-                    }
-                });
-
-                if (response.ok) {
-                    formMessage.textContent = translations[currentLang]['form-success'];
-                    formMessage.className = 'form-message success';
-                    form.reset();
-                    openThankYouModal();
-                } else {
-                    throw new Error('Failed to send message');
-                }
-            } catch (error) {
-                formMessage.textContent = translations[currentLang]['form-error'];
-                formMessage.className = 'form-message error';
-            } finally {
-                submitBtn.disabled = false;
-            }
-        });
-    </script>
+    <script src="js/studio.js"></script>
 </body>
 </html>

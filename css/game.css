@@ -1,0 +1,98 @@
+.game-hero {
+    border-radius: 16px;
+    padding: 32px 28px;
+    margin-bottom: 36px;
+    border: 2px solid var(--game-accent, var(--accent));
+    background: var(--game-hero, #222);
+}
+
+.game-hero h1 {
+    font-size: clamp(1.7rem, 4vw, 2.3rem);
+    margin: 10px 0 8px;
+}
+
+.game-hero p {
+    color: var(--muted);
+    max-width: 36rem;
+}
+
+.game-block {
+    margin-bottom: 36px;
+}
+
+.game-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.game-list span {
+    background: var(--game-soft, var(--teal));
+    color: #07332b;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-weight: 700;
+}
+
+.screenshots-wrapper {
+    position: relative;
+    overflow: hidden;
+}
+
+.screenshots {
+    display: flex;
+    gap: 16px;
+    overflow-x: auto;
+    padding: 8px 0 12px;
+    scroll-snap-type: x mandatory;
+}
+
+.screenshots img {
+    width: 156px;
+    height: 338px;
+    flex: 0 0 auto;
+    border: 2px solid var(--game-accent, var(--accent));
+    border-radius: 14px;
+    cursor: pointer;
+    scroll-snap-align: start;
+    object-fit: cover;
+    object-position: top center;
+    background: #111;
+}
+
+.screenshots img:hover {
+    transform: scale(1.03);
+}
+
+body.theme-solitaire {
+    --game-accent: #e74c3c;
+    --game-soft: #1abc9c;
+    --game-hero: #211614;
+}
+
+body.theme-tictactoe {
+    --game-accent: #4a90d9;
+    --game-soft: #f5c542;
+    --game-hero: #132032;
+}
+
+body.theme-tictactoe .game-list span {
+    color: #2a2108;
+}
+
+.back-link {
+    display: inline-block;
+    margin-bottom: 18px;
+    font-weight: 700;
+}
+
+@media (max-width: 600px) {
+    .screenshots img {
+        width: 132px;
+        height: 286px;
+    }
+
+    .game-hero {
+        padding: 22px 18px;
+    }
+}

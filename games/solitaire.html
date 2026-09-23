@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solitaire Harmony - BoxterGames</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="../Images/favicon.ico" type="image/x-icon">
+    <meta name="description" content="Solitaire Harmony — 5 classic solitaire games in one app.">
+    <meta name="author" content="BoxterGames">
+    <link rel="stylesheet" href="../css/studio.css">
+    <link rel="stylesheet" href="../css/game.css">
+</head>
+<body class="theme-solitaire">
+    <header class="site-header">
+        <a class="brand" href="../index.html">BoxterGames</a>
+        <nav class="nav-links">
+            <a href="../index.html" data-i18n="nav-games">Games</a>
+            <a href="../support.html" data-i18n="nav-support">Support</a>
+            <a href="../privacy.html" data-i18n="nav-privacy">Privacy</a>
+            <button type="button" class="lang-toggle" onclick="toggleLanguage()">RU/EN</button>
+        </nav>
+    </header>
+
+    <main class="page">
+        <a class="back-link" href="../index.html" data-i18n="back-home">All games</a>
+        <section class="game-hero">
+            <span class="pill pill-live" data-i18n="status-live">Live</span>
+            <h1 data-i18n="solitaire-title">Solitaire Harmony</h1>
+            <p data-i18n="solitaire-desc">5 classic solitaire games in one app, perfect for relaxing and brain training.</p>
+            <div class="store-buttons">
+                <a href="https://apps.apple.com/your-app-link" class="store-btn" title="Download on the App Store" aria-label="Download on the App Store" rel="noopener noreferrer">
+                    <img src="../Images/Icons/app-store.png" alt="App Store">
+                </a>
+                <a href="https://play.google.com/store/apps/details?id=com.boxtergames.solitaireHarmony" class="store-btn" title="Download on Google Play" aria-label="Download on Google Play" rel="noopener noreferrer">
+                    <img src="../Images/Icons/play-store.png" alt="Google Play">
+                </a>
+            </div>
+        </section>
+
+        <section class="game-block">
+            <h2 class="section-title" data-i18n="modes-title">Modes</h2>
+            <div class="game-list">
+                <span>Klondike</span>
+                <span>Spider</span>
+                <span>FreeCell</span>
+                <span>Pyramid</span>
+                <span>TriPeaks</span>
+            </div>
+        </section>
+
+        <section class="game-block">
+            <h2 class="section-title" data-i18n="shots-title">Screenshots</h2>
+            <div class="screenshots-wrapper">
+                <div class="screenshots">
+                    <img src="../Images/Solitaire/Klondike.png" alt="Klondike Screenshot" loading="lazy" onclick="openModal(this.src)">
+                    <img src="../Images/Solitaire/FreeCell.png" alt="FreeCell Screenshot" loading="lazy" onclick="openModal(this.src)">
+                    <img src="../Images/Solitaire/TriPeak.png" alt="TriPeak Screenshot" loading="lazy" onclick="openModal(this.src)">
+                    <img src="../Images/Solitaire/Tutorial.png" alt="Tutorial Screenshot" loading="lazy" onclick="openModal(this.src)">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div class="modal" id="image-modal" role="dialog" aria-modal="true">
+        <span class="modal-close" onclick="closeModal()" aria-label="Close">×</span>
+        <img src="" alt="Enlarged Screenshot" id="modal-image">
+    </div>
+
+    <footer class="site-footer">
+        <nav>
+            <a href="../support.html" data-i18n="nav-support">Support</a>
+            <a href="../privacy.html" data-i18n="nav-privacy">Privacy</a>
+        </nav>
+        <p data-i18n="footer-copy">© 2026 BoxterGames. All rights reserved.</p>
+    </footer>
+
+    <script src="../js/studio.js"></script>
+</body>
+</html>
