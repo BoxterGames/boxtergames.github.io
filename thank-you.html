@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BoxterGames - Thank You</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: linear-gradient(180deg, #1A1A1A 0%, #2C2C2C 100%);
+            color: #fff;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        header {
+            text-align: center;
+            padding: 40px 0;
+            border-bottom: 2px solid #E74C3C;
+        }
+        header h1 {
+            font-size: 2.5rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        header p {
+            font-size: 1.1rem;
+            opacity: 0.8;
+        }
+        .lang-toggle {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+        .lang-toggle button {
+            background: #1ABC9C;
+            border: none;
+            padding: 8px 16px;
+            color: #fff;
+            cursor: pointer;
+            border-radius: 4px;
+            font-weight: bold;
+        }
+        .lang-toggle button:hover {
+            background: #16A085;
+        }
+        .section {
+            margin: 40px 0;
+            text-align: center;
+        }
+        .section h2 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: #E74C3C;
+            text-transform: uppercase;
+        }
+        .section p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .return-btn {
+            display: inline-block;
+            background: #1ABC9C;
+            padding: 10px 20px;
+            border-radius: 4px;
+            color: #fff;
+            font-weight: bold;
+            margin-top: 20px;
+            text-decoration: none;
+        }
+        .return-btn:hover {
+            background: #16A085;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #1A1A1A;
+            border-top: 2px solid #E74C3C;
+            margin-top: 40px;
+        }
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 1.8rem;
+            }
+            .section h2 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="lang-toggle">
+        <button onclick="toggleLanguage()">RU/EN</button>
+    </div>
+    <div class="container">
+        <header>
+            <h1 id="header-title">BoxterGames</h1>
+            <p id="header-subtitle">Crafting Fun & Challenging Games</p>
+        </header>
+
+        <div class="section" id="thank-you">
+            <h2 id="thank-you-title">Thank You!</h2>
+            <p id="thank-you-desc">We’ve received your message and will get back to you soon. Thanks for reaching out!</p>
+            <a href="index.html" class="return-btn" id="return-btn">Back to Home</a>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2025 BoxterGames. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const translations = {
+            en: {
+                "header-title": "BoxterGames",
+                "header-subtitle": "Crafting Fun & Challenging Games",
+                "thank-you-title": "Thank You!",
+                "thank-you-desc": "We’ve received your message and will get back to you soon. Thanks for reaching out!",
+                "return-btn": "Back to Home"
+            },
+            ru: {
+                "header-title": "BoxterGames",
+                "header-subtitle": "Создаём весёлые и сложные игры",
+                "thank-you-title": "Спасибо!",
+                "thank-you-desc": "Мы получили ваше сообщение и скоро свяжемся с вами. Спасибо за обращение!",
+                "return-btn": "Вернуться на главную"
+            }
+        };
+
+        let currentLang = localStorage.getItem('language') || 'en';
+
+        function toggleLanguage() {
+            currentLang = currentLang === 'en' ? 'ru' : 'en';
+            localStorage.setItem('language', currentLang);
+            for (let id in translations[currentLang]) {
+                document.getElementById(id).textContent = translations[currentLang][id];
+            }
+        }
+
+        // Применить язык при загрузке
+        window.onload = () => {
+            for (let id in translations[currentLang]) {
+                document.getElementById(id).textContent = translations[currentLang][id];
+            }
+        };
+    </script>
+</body>
+</html>
