@@ -1,0 +1,94 @@
+[
+  {
+    "id": "buddy",
+    "url": "https://play.google.com/store/apps/details?id=ai.mybuddy.talkingflashcards_new&hl=en",
+    "image": "assets/work/buddy.jpg",
+    "screenshot": "assets/work/buddy-screen.png",
+    "youtube": [
+      "https://www.youtube.com/watch?v=9JaY2QpjAI8",
+      "https://www.youtube.com/embed/9JaY2QpjAI8?vq=large&rel=0&autohide=1&showinfo=0",
+      "https://www.youtube.com/embed/9JaY2QpjAI8?vq",
+      "https://www.youtube.com/yt/copyright",
+      "https://www.youtube.com/embed/dcQS5dLPyWI?vq",
+      "https://www.youtube.com/embed/qRo9tN9sI04?vq"
+    ],
+    "mediaImages": []
+  },
+  {
+    "id": "brainwell",
+    "url": "https://play.google.com/store/apps/details?id=com.monclarity.brainwell&hl=en",
+    "image": "assets/work/brainwell.png",
+    "screenshot": "assets/work/brainwell-screen.png",
+    "youtube": [
+      "https://www.youtube.com/watch?v=WcyNEdHmFec",
+      "https://www.youtube.com/embed/WcyNEdHmFec?vq",
+      "https://www.youtube.com/embed/SRga2BRW_A8?vq",
+      "https://www.youtube.com/embed/FUAuuKdvOmg?vq"
+    ],
+    "mediaImages": []
+  },
+  {
+    "id": "bluelight",
+    "url": "https://store.epicgames.com/en-US/p/bluelight-faq-53bfd1",
+    "error": "Page HTTP 403"
+  },
+  {
+    "id": "finch",
+    "url": "https://www.prnewswire.com/news-releases/finchshift-controllers-deliver-new-degrees-of-interaction-in-virtual-reality-300772207.html",
+    "image": "assets/work/finch.jpg",
+    "youtube": [],
+    "mediaImages": []
+  },
+  {
+    "id": "buddy-site",
+    "url": "https://buddy.ai/en/english-for-kids",
+    "image": "assets/work/buddy-site.png",
+    "youtube": [
+      "https://www.youtube.com/@buddy_en"
+    ],
+    "mediaImages": [
+      {
+        "alt": "Buddy",
+        "src": "/_nuxt/buddy.DJZhI2Gc.webp"
+      },
+      {
+        "alt": "Appstorecerf",
+        "src": "https://umbraco.int.mybuddy.ai/media/rronqbko/appstorecerf.png"
+      },
+      {
+        "alt": "Teacher Approved Google Play",
+        "src": "https://umbraco.int.mybuddy.ai/media/xpmgzdxx/teacher_approved_google_play.png"
+      },
+      {
+        "alt": "Img1",
+        "src": "https://umbraco.int.mybuddy.ai/media/zzgitbp5/img1.webp"
+      },
+      {
+        "alt": "Img1 Mobile",
+        "src": "https://umbraco.int.mybuddy.ai/media/z00j1ntg/img1-mobile.webp"
+      }
+    ]
+  },
+  {
+    "id": "brainwell-site",
+    "url": "https://brainwell.com/",
+    "youtube": [],
+    "mediaImages": [
+      {
+        "src": "/_nuxt/BrainwellIcon.BAY1G2Qs.webp"
+      }
+    ]
+  },
+  {
+    "id": "bluelight-announcement",
+    "url": "https://www.globenewswire.com/news-release/2023/11/03/2773354/0/en/bluelight-inc-is-pumped-to-announce-the-open-beta-on-a-testnet.html",
+    "youtube": [
+      "https://www.youtube.com/embed/9Uuo09QvfnA"
+    ],
+    "mediaImages": [
+      {
+        "src": "https://ml.globenewswire.com/media/ODQ3Yjk5YzctNGRjZC00NGNhLTgzODItMzE5ZGE3YzNiZTBmLTUwMDExOTg4Nw==/tiny/Bluelight-inc.png"
+      }
+    ]
+  }
+]

@@ -1,0 +1,163 @@
+[
+  {
+    "id": "games.vaveda.militaryoverturn",
+    "name": "Tower War — Tactical Conquest",
+    "href": "https://play.google.com/store/apps/details?id=games.vaveda.militaryoverturn&hl=en",
+    "contribution": "поддержка и улучшения",
+    "icon": "assets/saygames/games-vaveda-militaryoverturn.png"
+  },
+  {
+    "id": "com.arcade.mine",
+    "name": "Craft Valley — Building Game",
+    "href": "https://play.google.com/store/apps/details?id=com.arcade.mine&hl=en",
+    "contribution": "поддержка и улучшения",
+    "icon": "assets/saygames/com-arcade-mine.png"
+  },
+  {
+    "id": "com.time.trigger",
+    "name": "Johnny Trigger: Action Shooter",
+    "href": "https://play.google.com/store/apps/details?id=com.time.trigger&hl=en",
+    "contribution": "поддержка и улучшения",
+    "icon": "assets/saygames/com-time-trigger.png"
+  },
+  {
+    "id": "com.twist.hit",
+    "name": "Twist Hit!",
+    "href": "https://play.google.com/store/apps/details?id=com.twist.hit&hl=en",
+    "contribution": "поддержка и улучшения",
+    "icon": "assets/saygames/com-twist-hit.png"
+  },
+  {
+    "id": "com.savetheworld.game",
+    "name": "My Little Universe",
+    "href": "https://play.google.com/store/apps/details?id=com.savetheworld.game&hl=en",
+    "contribution": "портирование и LiveOps",
+    "icon": "assets/saygames/com-savetheworld-game.png"
+  },
+  {
+    "id": "com.master.hotelmaster",
+    "name": "My Perfect Hotel",
+    "href": "https://play.google.com/store/apps/details?id=com.master.hotelmaster&hl=en",
+    "contribution": "портирование и LiveOps",
+    "icon": "assets/saygames/com-master-hotelmaster.png"
+  },
+  {
+    "id": "com.water.balls",
+    "name": "Sand Balls — Puzzle Game",
+    "href": "https://play.google.com/store/apps/details?id=com.water.balls&hl=en",
+    "contribution": "портирование и LiveOps",
+    "icon": "assets/saygames/com-water-balls.png"
+  },
+  {
+    "id": "com.jtsniper.game",
+    "name": "Johnny Trigger — Sniper Game",
+    "href": "https://play.google.com/store/apps/details?id=com.jtsniper.game&hl=en",
+    "contribution": "портирование и LiveOps",
+    "icon": "assets/saygames/com-jtsniper-game.png"
+  },
+  {
+    "id": "com.rage.road",
+    "name": "Rage Road — Car Shooting Game",
+    "href": "https://play.google.com/store/apps/details?id=com.rage.road&hl=en",
+    "contribution": "портирование и LiveOps",
+    "icon": "assets/saygames/com-rage-road.png"
+  },
+  {
+    "id": "com.agent.action",
+    "name": "Agent Action — Spy Shooter",
+    "href": "https://play.google.com/store/apps/details?id=com.agent.action&hl=en",
+    "contribution": "портирование и LiveOps",
+    "icon": "assets/saygames/com-agent-action.png"
+  },
+  {
+    "id": "com.rescue.agent",
+    "name": "Helicopter Escape 3D",
+    "href": "https://play.google.com/store/apps/details?id=com.rescue.agent&hl=en",
+    "contribution": "портирование и LiveOps",
+    "icon": "assets/saygames/com-rescue-agent.png"
+  },
+  {
+    "id": "com.gamepie.airpolice",
+    "name": "HellCopter",
+    "href": "https://play.google.com/store/apps/details?id=com.gamepie.airpolice&hl=en",
+    "contribution": "портирование и LiveOps",
+    "icon": "assets/saygames/com-gamepie-airpolice.png"
+  },
+  {
+    "id": "com.playstrom.drawonepart",
+    "name": "DOP: Draw One Part",
+    "href": "https://play.google.com/store/apps/details?id=com.playstrom.drawonepart&hl=en",
+    "contribution": "портирование и LiveOps",
+    "icon": "assets/saygames/com-playstrom-drawonepart.png"
+  },
+  {
+    "id": "com.playstrom.dop2",
+    "name": "DOP 2: Delete One Part",
+    "href": "https://play.google.com/store/apps/details?id=com.playstrom.dop2&hl=en",
+    "contribution": "портирование и LiveOps",
+    "icon": "assets/saygames/com-playstrom-dop2.png"
+  },
+  {
+    "id": "com.playstrom.dop3",
+    "name": "DOP 3: Displace One Part",
+    "href": "https://play.google.com/store/apps/details?id=com.playstrom.dop3&hl=en",
+    "contribution": "портирование и LiveOps",
+    "icon": "assets/saygames/com-playstrom-dop3.png"
+  },
+  {
+    "id": "com.playstrom.dop4",
+    "name": "DOP 4: Draw One Part",
+    "href": "https://play.google.com/store/apps/details?id=com.playstrom.dop4&hl=en",
+    "contribution": "портирование и LiveOps",
+    "icon": "assets/saygames/com-playstrom-dop4.png"
+  },
+  {
+    "id": "com.playstrom.dop5",
+    "name": "DOP 5: Delete One Part",
+    "href": "https://play.google.com/store/apps/details?id=com.playstrom.dop5&hl=en",
+    "contribution": "портирование и LiveOps",
+    "icon": "assets/saygames/com-playstrom-dop5.png"
+  },
+  {
+    "id": "com.desert.riders",
+    "name": "Desert Riders: Car Battle Game",
+    "href": "https://play.google.com/store/apps/details?id=com.desert.riders&hl=en",
+    "contribution": "портирование и LiveOps",
+    "icon": "assets/saygames/com-desert-riders.png"
+  },
+  {
+    "id": "com.kadka.forknsausage",
+    "name": "Fork N Sausage",
+    "href": "https://play.google.com/store/apps/details?id=com.kadka.forknsausage&hl=en",
+    "contribution": "портирование и LiveOps",
+    "icon": "assets/saygames/com-kadka-forknsausage.png"
+  },
+  {
+    "id": "com.shape.change",
+    "name": "Jelly Shift — Obstacle Course",
+    "href": "https://play.google.com/store/apps/details?id=com.shape.change&hl=en",
+    "contribution": "портирование и LiveOps",
+    "icon": "assets/saygames/com-shape-change.png"
+  },
+  {
+    "id": "com.turbo.stars",
+    "name": "Turbo Stars — Rival Racing",
+    "href": "https://play.google.com/store/apps/details?id=com.turbo.stars&hl=en",
+    "contribution": "портирование и LiveOps",
+    "icon": "assets/saygames/com-turbo-stars.png"
+  },
+  {
+    "id": "com.battle.disc",
+    "name": "Battle Disc",
+    "href": "https://play.google.com/store/apps/details?id=com.battle.disc&hl=en",
+    "contribution": "портирование и LiveOps",
+    "icon": "assets/saygames/com-battle-disc.png"
+  },
+  {
+    "id": "com.train.taxi",
+    "name": "Train Taxi",
+    "href": "https://play.google.com/store/apps/details?id=com.train.taxi&hl=en",
+    "contribution": "портирование и LiveOps",
+    "icon": "assets/saygames/com-train-taxi.png"
+  }
+]

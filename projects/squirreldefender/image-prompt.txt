@@ -1,0 +1,5 @@
+Tool: built-in ImageGen; transparent_background: true.
+Reference/edit target: squirreldefender/Image_2026-10-30_00-15-50.png001.png.
+Output: assets/hero-squirrel.png.
+
+Use case: background-extraction. Asset: transparent mascot cutout for the Squirrel Defender game's website. Edit target: supplied actual game screenshot. Extract ONLY the orange low-poly squirrel character at right, with its green Robin Hood hat and red feather, orange bushy tail, cream muzzle and belly, brown wristbands. Show this same complete character standing upright in the same front three-quarter pose. Faithfully preserve its exact game model, faceted low-poly geometry, proportions, orange tail, round dark eyes, colors, matte simple game material and friendly determined expression. Clean full silhouette, no stump, no ground, no human, no sign, no tree, no game UI, no typography, no added props. Transparent background with true alpha, no shadow backdrop. Character fills most of tall composition, no cropping of tail, ears, hat or feet. This is an extraction of the existing game character, not a redesigned squirrel, not photorealistic, not furry, not a smooth Pixar model.

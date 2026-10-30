@@ -1,0 +1,28 @@
+{
+  "buddy": {
+    "image": "assets/work/buddy-character.webp",
+    "source": "https://buddy.ai/en/english-for-kids",
+    "video": "https://www.youtube.com/watch?v=9JaY2QpjAI8",
+    "videoAuthor": "Buddy.ai: English for kids"
+  },
+  "saygames": {
+    "images": "assets/saygames/games.json",
+    "video": "https://www.youtube.com/watch?v=Su7MHPTLzio",
+    "videoAuthor": "SayGames"
+  },
+  "bluelight": {
+    "image": "assets/work/bluelight-1.png",
+    "source": "https://enter.amcpros.com/ava/entry/bluelight-inc-game/",
+    "description": "Archived project website submitted to AVA Digital Awards"
+  },
+  "brainwell": {
+    "image": "assets/work/brainwell-screen.png",
+    "source": "https://play.google.com/store/apps/details?id=com.monclarity.brainwell"
+  },
+  "finch": {
+    "image": "assets/work/finch-controller.png",
+    "source": "https://www.behance.net/gallery/120859425/Finch-Shift",
+    "imageAuthor": "Kirill Saldaev",
+    "productSource": "https://www.prnewswire.com/news-releases/finchshift-controllers-deliver-new-degrees-of-interaction-in-virtual-reality-300772207.html"
+  }
+}
