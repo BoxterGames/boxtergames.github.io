@@ -26,7 +26,7 @@
 .language-switch summary{display:flex;align-items:center;gap:7px;cursor:pointer;list-style:none;padding:8px 3px;white-space:nowrap}
 .language-switch summary::-webkit-details-marker{display:none}
 .language-switch summary:focus-visible{outline:2px solid currentColor;outline-offset:4px}
-.language-switch img{display:block;width:22px;height:15px;object-fit:cover;border-radius:2px;box-shadow:0 0 0 1px #8885}
+.language-switch .language-flag{display:block;flex:none;width:22px;height:15px;border-radius:2px;box-shadow:0 0 0 1px #8885}
 .language-arrow{width:6px;height:6px;border-right:1.5px solid currentColor;border-bottom:1.5px solid currentColor;transform:rotate(45deg) translateY(-2px)}
 .language-switch[open] .language-arrow{transform:rotate(225deg) translate(-1px,-1px)}
 .language-options{position:absolute;right:0;top:calc(100% + 5px);min-width:144px;padding:5px;background:#f7f7f1;color:#191b17;border:1px solid #c6c9bd;border-radius:5px;box-shadow:0 8px 24px #0003}
