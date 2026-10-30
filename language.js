@@ -16,7 +16,7 @@
     ? preference
     : (/^ru(?:-|$)/i.test(navigator.language || '') ? 'ru' : 'en');
   if (!english && language === 'en') {
-    const target = location.pathname.replace(/(index|about)\.html$/, '$1.en.html').replace(/\/$/, '/index.en.html');
+    const target = location.pathname.replace(/projects\.html$/, 'index.en.html').replace(/(index|about)\.html$/, '$1.en.html').replace(/\/$/, '/index.en.html');
     if (target !== location.pathname) location.replace(target + location.search + location.hash);
   }
   document.addEventListener('click', event => {
@@ -42,8 +42,7 @@
       const target = new URL(link.href);
       try { sessionStorage.setItem('portfolio-language-scroll', JSON.stringify({path: target.pathname, top: window.scrollY, left: window.scrollX})); } catch (_) {}
       try { localStorage.setItem('portfolio-language', selected); } catch (_) {}
-      const page = /about(?:\.en)?\.html$/.test(location.pathname) ? 'about' : 'index';
-      location.href = page + (selected === 'en' ? '.en' : '') + '.html' + location.search + location.hash;
+      location.href = target.pathname + location.search + location.hash;
       return;
     }
     // Preserve an explicitly opened English page when navigating within the portfolio.

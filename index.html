@@ -13,7 +13,10 @@
       const language = preference === 'ru' || preference === 'en'
         ? preference
         : (/^ru(?:-|$)/i.test(navigator.language || '') ? 'ru' : 'en');
-      const target = language === 'en' ? 'about.en.html' : 'about.html';
+      const project = /^#project\/[\w-]+$/.test(location.hash);
+      const target = project
+        ? (language === 'en' ? 'index.en.html' : 'projects.html')
+        : (language === 'en' ? 'about.en.html' : 'about.html');
       location.replace(target + location.search + location.hash);
     })();
   </script>
