@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#eeeee7">
+  <meta name="description" content="A portfolio of games by BoxterGames.">
+  <title>boxtergames — projects</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="language.js"></script>
+  <link rel="stylesheet" href="projects/solitaire-harmony/style.css">
+  <link rel="stylesheet" href="projects/squirreldefender/style.css">
+  <link rel="stylesheet" href="projects/fractal-puzzle/style.css">
+  <script src="projects/solitaire-harmony/project.en.js" defer></script>
+  <script src="projects/squirreldefender/project.en.js" defer></script>
+  <script src="projects/fractal-puzzle/project.en.js" defer></script>
+  <script src="app.en.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to project</a>
+  <header class="header">
+    <a class="wordmark brand-name" href="#project/solitaire-harmony" aria-label="boxtergames — first project">boxtergames</a>
+    <span class="prototype-label">HTML / CONCEPT 01</span>
+    <nav class="site-nav" aria-label="Main navigation"><a href="about.html">About me <span aria-hidden="true">↗</span></a></nav>
+    <nav class="language-switch" aria-label="Language"><a href="index.html" data-language="ru" lang="ru">RU</a><span aria-hidden="true">/</span><a href="index.en.html" data-language="en" lang="en" aria-current="true">EN</a></nav>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <div id="custom-project" hidden></div>
+    <div id="generic-project">
+    <section class="hero" aria-labelledby="project-title">
+      <div class="project-meta"><span id="project-category"></span><span>SAMPLE PROJECT · CONCEPT</span></div>
+      <div class="hero-layout">
+        <div class="hero-copy">
+          <div class="eyebrow"><span class="project-number" id="project-number">01 / 03</span><span id="project-name"></span></div>
+          <h1 id="project-title"></h1>
+          <p class="project-description" id="project-description"></p>
+          <div class="hero-actions"><a class="primary-button" href="#story" id="story-link">Discover the project <span aria-hidden="true">↓</span></a><button class="round-button" id="hero-next" aria-label="Next project">↗</button></div>
+          <p class="demo-disclaimer">Names and content are fictional.<br>This is a layout concept.</p>
+        </div>
+        <figure class="hero-figure" id="swipe-area">
+          <div class="visual-label"><span><i></i> MAIN VISUAL</span><span id="visual-type"></span></div>
+          <div id="hero-art" class="hero-art"></div>
+          <figcaption><span id="visual-caption"></span><button class="text-button" id="expand-visual">Explore <span aria-hidden="true">↗</span></button></figcaption>
+          <span class="swipe-hint">← SWIPE FOR ANOTHER PROJECT →</span>
+        </figure>
+      </div>
+      <div class="hero-proof" id="hero-proof"></div>
+      <div class="below-fold"><span>A good project speaks for itself. Details below.</span><a href="#story" aria-label="Read the project story">Scroll <span aria-hidden="true">↓</span></a></div>
+    </section>
+
+    <section class="story section" id="story" aria-labelledby="story-title">
+      <div class="section-index"><span>01 / CONTEXT</span><span>~ 1 min read</span></div>
+      <div class="story-layout"><h2 id="story-title"></h2><div class="story-body"><p id="challenge"></p><p id="approach"></p><dl class="project-credits" id="project-credits"></dl></div></div>
+    </section>
+
+    <section class="decisions section" aria-labelledby="decisions-title">
+      <div class="section-index"><span>02 / DECISIONS</span><span>Details that make a difference</span></div>
+      <h2 id="decisions-title">What makes this project special</h2>
+      <div class="decision-list" id="decision-list"></div>
+    </section>
+
+    <section class="result section" aria-labelledby="result-title">
+      <div class="section-index"><span>03 / RESULT</span><span>What a real case study could show</span></div>
+      <div class="result-layout"><h2 id="result-title"></h2><div><p id="result-description"></p><p class="evidence-note">A real portfolio could include a demo, build, testimonial or measurable result.</p></div></div>
+    </section>
+
+    <a class="next-project" id="next-project" href="#project/flow"><div><span class="eyebrow">NEXT PROJECT</span><span class="next-name" id="next-name"></span></div><span class="next-arrow" aria-hidden="true">↗</span></a>
+    </div>
+    <footer><span>BOXTERGAMES / SELECTED WORK</span><span>Layout prototype · 2026</span><nav class="footer-nav" aria-label="Footer navigation"><a class="footer-about-button" href="about.html">About me <span aria-hidden="true">↗</span></a><button class="text-button" id="footer-index">View all projects ↗</button></nav></footer>
+  </main>
+  <footer class="legal-footer"><span>© 2026 BoxterGames</span><a href="privacy.html">Privacy Policy ↗</a></footer>
+
+  <nav class="project-dock" aria-label="Project navigation">
+    <div class="dock-heading"><span>PROJECTS</span><span id="dock-counter">01 / 03</span></div>
+    <div class="dock-projects" id="dock-projects"></div>
+    <a class="dock-about" href="about.html">About me <span aria-hidden="true">↗</span></a>
+  </nav>
+  <div class="sr-only" role="status" aria-live="polite" id="project-status"></div>
+
+  <dialog id="index-dialog" aria-labelledby="index-title">
+    <div class="dialog-header"><span class="eyebrow">SELECTED WORK / 03</span><button class="close-button" data-close aria-label="Close project list">×</button></div>
+    <h2 id="index-title">Find your next favorite.</h2><p class="dialog-intro">Three games by boxtergames. Each with its own character.</p><div id="index-list"></div>
+  </dialog>
+  <dialog id="logic-dialog" aria-labelledby="logic-title">
+    <div class="dialog-header"><span class="eyebrow">ANATOMY OF A CASE STUDY</span><button class="close-button" data-close aria-label="Close diagram">×</button></div>
+    <h2 id="logic-title">First, spark interest.<br>Then reveal the details.</h2>
+    <ol class="logic-list">
+      <li><strong>First screen · five seconds</strong><p>What it is, who it is for and its main value, with one visual and three features.</p></li>
+      <li><strong>Context · a short paragraph</strong><p>The task and constraints, team contribution, platform and status.</p></li>
+      <li><strong>Decisions · show and explain</strong><p>Two or three key details, with visuals and a short explanation.</p></li>
+      <li><strong>Result · provide evidence</strong><p>The outcome, real metrics, a demo or a testimonial when available, and a clear next step.</p></li>
+      <li><strong>Next project · keep exploring</strong><p>The next project, arrows and a persistent project panel keep the catalog accessible.</p></li>
+    </ol>
+    <div class="logic-note"><strong>How to navigate</strong><p>Scroll down to read. Swipe the main visual or use the buttons and arrow keys to change projects. Browser history works as usual.</p></div>
+  </dialog>
+  <dialog id="visual-dialog" aria-labelledby="visual-dialog-title">
+    <div class="dialog-header"><h2 id="visual-dialog-title">Visual concept</h2><button class="close-button" data-close aria-label="Close visual">×</button></div><div id="expanded-art"></div><p class="dialog-intro">Concept visual. A finished case study could show a screenshot, product recording or game scene.</p>
+  </dialog>
+</body>
+</html>
