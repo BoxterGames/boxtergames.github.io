@@ -1,101 +1,24 @@
 <!doctype html>
-<html lang="ru">
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#eeeee7">
-  <meta name="description" content="Интерактивный HTML-блокаут портфолио: один проект — одна история.">
-  <title>boxtergames — проекты студии</title>
-  <link rel="stylesheet" href="styles.css?v=flags-2">
-  <script src="language.js?v=scroll-1"></script>
-  <link rel="stylesheet" href="projects/solitaire-harmony/style.css">
-  <link rel="stylesheet" href="projects/squirreldefender/style.css">
-  <link rel="stylesheet" href="projects/fractal-puzzle/style.css">
-  <script src="projects/solitaire-harmony/project.js" defer></script>
-  <script src="projects/squirreldefender/project.js" defer></script>
-  <script src="projects/fractal-puzzle/project.js" defer></script>
-  <script src="app.js" defer></script>
+  <meta name="robots" content="noindex">
+  <title>BoxterGames — redirecting</title>
+  <script>
+    (() => {
+      let preference = null;
+      try { preference = localStorage.getItem('portfolio-language'); } catch (_) {}
+
+      const language = preference === 'ru' || preference === 'en'
+        ? preference
+        : (/^ru(?:-|$)/i.test(navigator.language || '') ? 'ru' : 'en');
+      const target = language === 'en' ? 'about.en.html' : 'about.html';
+      location.replace(target + location.search + location.hash);
+    })();
+  </script>
 </head>
 <body>
-  <a class="skip-link" href="#main">К проекту</a>
-  <header class="header">
-    <a class="wordmark brand-name" href="#project/solitaire-harmony" aria-label="boxtergames — первый проект">boxtergames</a>
-    <span class="prototype-label">HTML / БЛОКАУТ 01</span>
-    <nav class="site-nav" aria-label="Основная навигация"><a href="about.html">Обо мне <span aria-hidden="true">↗</span></a></nav>
-    <details class="language-switch"><summary aria-label="Язык: Русский"><svg class="language-flag" width="22" height="15" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 20"><path fill="#fff" d="M0 0h30v20H0z"/><path fill="#0039a6" d="M0 6.67h30v6.66H0z"/><path fill="#d52b1e" d="M0 13.33h30V20H0z"/></svg><span>RU</span><span class="language-arrow" aria-hidden="true"></span></summary><nav class="language-options" aria-label="Язык"><a href="index.html" data-language="ru" lang="ru" aria-current="true"><svg class="language-flag" width="22" height="15" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 20"><path fill="#fff" d="M0 0h30v20H0z"/><path fill="#0039a6" d="M0 6.67h30v6.66H0z"/><path fill="#d52b1e" d="M0 13.33h30V20H0z"/></svg>Русский</a><a href="index.en.html" data-language="en" lang="en"><svg class="language-flag" width="22" height="15" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 40"><path fill="#012169" d="M0 0h60v40H0z"/><path stroke="#fff" stroke-width="8" d="m0 0 60 40M60 0 0 40"/><path stroke="#c8102e" stroke-width="3" d="m0 0 60 40M60 0 0 40"/><path stroke="#fff" stroke-width="12" d="M30 0v40M0 20h60"/><path stroke="#c8102e" stroke-width="7" d="M30 0v40M0 20h60"/></svg>English</a></nav></details>
-  </header>
-
-  <main id="main" tabindex="-1">
-    <div id="custom-project" hidden></div>
-    <div id="generic-project">
-    <section class="hero" aria-labelledby="project-title">
-      <div class="project-meta"><span id="project-category"></span><span>УСЛОВНЫЙ ПРОЕКТ · КОНЦЕПТ</span></div>
-      <div class="hero-layout">
-        <div class="hero-copy">
-          <div class="eyebrow"><span class="project-number" id="project-number">01 / 03</span><span id="project-name"></span></div>
-          <h1 id="project-title"></h1>
-          <p class="project-description" id="project-description"></p>
-          <div class="hero-actions"><a class="primary-button" href="#story" id="story-link">Почему это интересно <span aria-hidden="true">↓</span></a><button class="round-button" id="hero-next" aria-label="Следующий проект">↗</button></div>
-          <p class="demo-disclaimer">Названия и содержание вымышлены.<br>Здесь проверяем структуру и подачу.</p>
-        </div>
-        <figure class="hero-figure" id="swipe-area">
-          <div class="visual-label"><span><i></i> ГЛАВНЫЙ ВИЗУАЛ</span><span id="visual-type"></span></div>
-          <div id="hero-art" class="hero-art"></div>
-          <figcaption><span id="visual-caption"></span><button class="text-button" id="expand-visual">Рассмотреть <span aria-hidden="true">↗</span></button></figcaption>
-          <span class="swipe-hint">← СВАЙП — ДРУГОЙ ПРОЕКТ →</span>
-        </figure>
-      </div>
-      <div class="hero-proof" id="hero-proof"></div>
-      <div class="below-fold"><span>Хороший проект видно сразу. Детали — ниже.</span><a href="#story" aria-label="Читать историю проекта">Прокрутить <span aria-hidden="true">↓</span></a></div>
-    </section>
-
-    <section class="story section" id="story" aria-labelledby="story-title">
-      <div class="section-index"><span>01 / КОНТЕКСТ</span><span>Чтение ~ 1 мин</span></div>
-      <div class="story-layout"><h2 id="story-title"></h2><div class="story-body"><p id="challenge"></p><p id="approach"></p><dl class="project-credits" id="project-credits"></dl></div></div>
-    </section>
-
-    <section class="decisions section" aria-labelledby="decisions-title">
-      <div class="section-index"><span>02 / РЕШЕНИЯ</span><span>Детали, которые делают разницу</span></div>
-      <h2 id="decisions-title">Что делает проект особенным</h2>
-      <div class="decision-list" id="decision-list"></div>
-    </section>
-
-    <section class="result section" aria-labelledby="result-title">
-      <div class="section-index"><span>03 / РЕЗУЛЬТАТ</span><span>Что стоит показать в настоящем кейсе</span></div>
-      <div class="result-layout"><h2 id="result-title"></h2><div><p id="result-description"></p><p class="evidence-note">В реальном портфолио здесь нужны подтверждения: запись демо, ссылка на сборку, отзыв или измеримый результат. Цифры придумывать не нужно.</p></div></div>
-    </section>
-
-    <a class="next-project" id="next-project" href="#project/flow"><div><span class="eyebrow">СЛЕДУЮЩИЙ ПРОЕКТ</span><span class="next-name" id="next-name"></span></div><span class="next-arrow" aria-hidden="true">↗</span></a>
-    </div>
-    <footer><span>BOXTERGAMES / SELECTED WORK</span><span>Прототип структуры · 2026</span><nav class="footer-nav" aria-label="Навигация в футере"><a class="footer-about-button" href="about.html">Обо мне <span aria-hidden="true">↗</span></a><button class="text-button" id="footer-index">Открыть все проекты ↗</button></nav></footer>
-  </main>
-  <footer class="legal-footer"><span>© 2026 BoxterGames</span><a href="privacy.html">Privacy Policy ↗</a></footer>
-
-  <nav class="project-dock" aria-label="Переключение проектов">
-    <div class="dock-heading"><span>ПРОЕКТЫ</span><span id="dock-counter">01 / 03</span></div>
-    <div class="dock-projects" id="dock-projects"></div>
-    <a class="dock-about" href="about.html">Обо мне <span aria-hidden="true">↗</span></a>
-  </nav>
-  <div class="sr-only" role="status" aria-live="polite" id="project-status"></div>
-
-  <dialog id="index-dialog" aria-labelledby="index-title">
-    <div class="dialog-header"><span class="eyebrow">SELECTED WORK / 03</span><button class="close-button" data-close aria-label="Закрыть список проектов">×</button></div>
-    <h2 id="index-title">Найдите свой интерес.</h2><p class="dialog-intro">Три игры boxtergames. У каждой — свой характер.</p><div id="index-list"></div>
-  </dialog>
-  <dialog id="logic-dialog" aria-labelledby="logic-title">
-    <div class="dialog-header"><span class="eyebrow">АНАТОМИЯ КЕЙСА</span><button class="close-button" data-close aria-label="Закрыть схему">×</button></div>
-    <h2 id="logic-title">Сначала заинтересовать.<br>Потом раскрыть детали.</h2>
-    <ol class="logic-list">
-      <li><strong>Первый экран · за 5 секунд</strong><p>Что это, для кого и в чём главная ценность. Один выразительный визуал и три конкретные особенности.</p></li>
-      <li><strong>Контекст · короткий абзац</strong><p>Какая была задача и ограничения. Рядом — вклад команды, платформа и статус.</p></li>
-      <li><strong>Решения · показать и объяснить</strong><p>Две-три важные детали. В каждой: визуальное доказательство и короткое объяснение решения.</p></li>
-      <li><strong>Результат · дать подтверждение</strong><p>Что получилось. Реальные метрики, демо или отзыв, если они есть. Ясный следующий шаг.</p></li>
-      <li><strong>Следующий проект · продолжить просмотр</strong><p>Название следующего кейса, стрелки и постоянная панель проектов. Весь каталог доступен одним нажатием.</p></li>
-    </ol>
-    <div class="logic-note"><strong>Как листать</strong><p>Вниз — читать кейс. Влево/вправо по главному визуалу — сменить проект. Также работают кнопки, клавиши ← → и история браузера. Колесо мыши сохраняет обычную прокрутку.</p></div>
-  </dialog>
-  <dialog id="visual-dialog" aria-labelledby="visual-dialog-title">
-    <div class="dialog-header"><h2 id="visual-dialog-title">Визуальный концепт</h2><button class="close-button" data-close aria-label="Закрыть визуал">×</button></div><div id="expanded-art"></div><p class="dialog-intro">Схематичный визуал. В готовом кейсе здесь — реальный скриншот, запись продукта или игровая сцена.</p>
-  </dialog>
+  <p>Redirecting to BoxterGames… <a href="about.html">Continue to the website</a>.</p>
 </body>
 </html>
