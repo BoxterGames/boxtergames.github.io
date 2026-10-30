@@ -10,6 +10,16 @@
     if (target !== location.pathname) location.replace(target + location.search + location.hash);
   }
   document.addEventListener('click', event => {
+    document.querySelectorAll('.language-switch[open]').forEach(menu => {
+      if (!menu.contains(event.target)) menu.open = false;
+    });
+  });
+  document.addEventListener('keydown', event => {
+    if (event.key !== 'Escape') return;
+    const menu = document.querySelector('.language-switch[open]');
+    if (menu) { menu.open = false; menu.querySelector('summary').focus(); }
+  });
+  document.addEventListener('click', event => {
     const link = event.target.closest('a');
     if (!link) return;
     if (link.dataset.language) {

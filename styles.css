@@ -22,9 +22,16 @@
 
 /* Legal links stay in the document footer, outside the fixed project dock. */
 #main > footer{padding-bottom:30px}.legal-footer{border-top:1px solid var(--line);padding:24px 0 150px;font:12px/1.4 Arial,Helvetica,sans-serif}.legal-footer a:hover{text-decoration:underline;text-underline-offset:5px}
-.language-switch{display:inline-flex;align-items:center;gap:6px;white-space:nowrap;font-size:11px;font-weight:700;letter-spacing:.04em}
-.language-switch a{padding:7px 3px;opacity:.55}
-.language-switch a[aria-current="true"]{opacity:1;text-decoration:underline;text-underline-offset:5px}
-.language-switch a:hover{opacity:1}
+.language-switch{position:relative;z-index:20;flex:none;font-size:12px;font-weight:700}
+.language-switch summary{display:flex;align-items:center;gap:7px;cursor:pointer;list-style:none;padding:8px 3px;white-space:nowrap}
+.language-switch summary::-webkit-details-marker{display:none}
+.language-switch summary:focus-visible{outline:2px solid currentColor;outline-offset:4px}
+.language-switch img{display:block;width:22px;height:15px;object-fit:cover;border-radius:2px;box-shadow:0 0 0 1px #8885}
+.language-arrow{width:6px;height:6px;border-right:1.5px solid currentColor;border-bottom:1.5px solid currentColor;transform:rotate(45deg) translateY(-2px)}
+.language-switch[open] .language-arrow{transform:rotate(225deg) translate(-1px,-1px)}
+.language-options{position:absolute;right:0;top:calc(100% + 5px);min-width:144px;padding:5px;background:#f7f7f1;color:#191b17;border:1px solid #c6c9bd;border-radius:5px;box-shadow:0 8px 24px #0003}
+.language-options a{display:flex;align-items:center;gap:10px;padding:10px;border-radius:3px;white-space:nowrap}
+.language-options a:hover,.language-options a:focus-visible{background:#e7e9df}
+.language-options a[aria-current="true"]::after{content:"✓";margin-left:auto}
 .about-page .language-switch{margin-left:auto}
 @media(max-width:700px){.header{gap:14px}.language-switch{font-size:10px}.about-page .about-header-role{display:none}}
